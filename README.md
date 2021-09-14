@@ -4,7 +4,7 @@
 <br/><br/><br/>
 
 
-# Módulo 5: Tipos y clases en JS - Entrega: Juego de disparos
+# Módulo 5: Tipos y clases predefinidas, el tipo number, Multi-asignación, Spread-Rest, Clases ES6 y Herencia y Ejecución de programas JS. - Entrega: Juego de disparos
 
 Versión: 14 de septiembre de 2021
 
@@ -23,7 +23,7 @@ En esta entrega vamos a desarrollar un juego completo usando HTML, CSS y JavaScr
 
 ## Descargar el código del proyecto
 
-El proyecto debe clonarse en el ordenador desde el que se está trabajando:
+El proyecto debe descargarse o clonarse en el ordenador desde el que se está trabajando. Para ello podemos descargar el paquete zip con el código desde el desplegable verde que está en la parte superior de la página de GitHub y que indica "Code" y ahí seleccionar la opción "Download ZIP". Alternativamente se puede usar GIT si se conoce para clonar el proyecto, el comando sería el siguiente:
 
 ```
 $ git clone https://github.com/ging-moocs/MOOC_html_mod5-juego_entrega
@@ -74,12 +74,12 @@ Se pide modificar el código proporcionado para lograr tres funcionalidades nuev
 
 - Registro de los **puntos conseguidos** por el usuario. Cada vez que convierta a un oponente en estrella debe incrementar el número de puntos en una unidad.
 - El personaje principal debe contar con **tres vidas**. Si es alcanzado por un disparo, en vez de perder, el número de vidas disminuirá en una unidad, otorgándole una nueva oportunidad para ganar. Si el número de vidas llega a cero, se termina el juego.
-- Si el jugador consigue disparar al oponente (triángulo) y convertirlo en estrella, se le presentará una **oponente final** más poderoso (pentágono). Éste se moverá al **doble de velocidad** que el triángulo.
+- Si el jugador consigue alcanzar con un disparo al oponente (triángulo) y convertirlo en estrella, se le presentará una **oponente final** más poderoso (pentágono). Éste se moverá al **doble de velocidad** que el triángulo.
 
 Para implementar las tres funcionalidades debes seguir los siguientes pasos:
 
 1. Añadir un atributo nuevo _score_ a la clase _Game_ que refleje la puntuación (inicialmente 0).
-2. Modificar el código del método _collide_ de la clase _Opponent_ para que sume un punto a _score_ cada vez que se dispara a un triángulo.
+2. Modificar el código del método _collide_ de la clase _Opponent_ para que sume un punto a _score_ cada vez que se alcanza con un disparo a un triángulo.
 3. Añadir un atributo nuevo _lives_ a la clase _Player_ que valga 3 inicialmente. Puedes definir el nº de vidas inicial en una constante en main.js.
 4. Modificar el código del método _collide_ de la clase _Player_ para que reste una vida cada vez que al jugador le alcance un disparo mientras esté vivo.
 	- Si al jugador le quedan vidas, debe morirse durante dos segundos (llamando al método `collide` de su superclase _Character_) y renacer al cabo de ese tiempo. Para ello, el atributo `src` de `this.image` debe recuperar su valor original (el de `this.myImage` y poner a `false` el atributo `this.dead`.
