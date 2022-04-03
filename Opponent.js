@@ -63,13 +63,22 @@ class Opponent extends Character {
      * Mata al oponente
      */
     collide() {
-        
+      
         if (!this.dead) {
+            
             setTimeout(() => {
                 this.game.removeOpponent();
+                this.game.score=this.game.score+1;
+                
+                this.recargar();
             }, 2000);
             super.collide();
         }
+        
+    }
 
+
+     recargar(){
+        document.getElementById("scoreli").innerHTML="Score: "+this.game.score;
     }
 }

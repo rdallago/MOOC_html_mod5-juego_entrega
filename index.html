@@ -11,11 +11,32 @@
   <script src="Opponent.js" type="text/javascript"></script>
   <script src="Shot.js" type="text/javascript"></script>
   <script src="main.js" type="text/javascript"></script>
+  <script src="Boss.js" type="text/javascript"></script>
 </head>
 
 <body>
   <button id="pause" class="gamebutton" onclick="this.blur();">Pausa</button>
   <button id="reset" class="gamebutton" onclick="this.blur();">NUEVA PARTIDA</button>
+  <li id="scoreli"></li>
+  <li id="livesli"></li>
+  
 </body>
+<script type="text/javascript">
 
+
+  this.game=new Game(this);
+ 
+
+  player=new Player(this.game);
+  
+  
+ 
+  
+  document.getElementById("scoreli").innerHTML="Score: "+this.game.score;
+  document.getElementById("livesli").innerHTML="Lives: "+this.player.lives;
+
+
+ 
+  
+  </script>
 </html>
