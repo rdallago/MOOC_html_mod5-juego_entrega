@@ -218,10 +218,10 @@ class Game {
             gameOver.render();
 
         }
-
+        else{
         this.ended = true;
         let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, GAME_OVER_PICTURE)
-        gameOver.render();
+        gameOver.render();}
     }
 
     /**

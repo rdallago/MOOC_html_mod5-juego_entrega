@@ -71,18 +71,9 @@ collide() {
             this.recargar();
         }, 2000);
         super.collide();
-    }
-     if (!this.dead&&this.game.score===1) {
-        ;
-        setTimeout(() => {
-            this.game.removeOpponent();
-            this.game.score=this.game.score+1;
-            
-            this.recargar();
-        }, 2000);
-        super.collide();
         this.game.endGame();
     }
+  
     
 }
 
